@@ -13,6 +13,7 @@ import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.tcas.Annotation;
 
+import edu.cmu.lti.f14.hw3.hw3_niloyg.casconsumers.DocumentVectorCache;
 import edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document;
 import edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Token;
 import edu.cmu.lti.f14.hw3.hw3_niloyg.utils.StanfordLemmatizer;
@@ -26,7 +27,7 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException {
-
+	  
 		FSIterator<Annotation> iter = jcas.getAnnotationIndex().iterator();
 		if (iter.isValid()) {
 			iter.moveToNext();
@@ -68,8 +69,10 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
     List<Word> words = tokenizer.tokenize();
     for(Word word:words)
     {
+      if(DocumentVectorCache.getInstance().getStopWords().contains(word.word()))
+        continue;
       if((p.matcher(word.word()).find()))
-              continue;
+        continue;
       res.add(StanfordLemmatizer.stemWord(word.word().toLowerCase()));
     }
     return res;
@@ -87,7 +90,7 @@ public class DocumentVectorAnnotator extends JCasAnnotator_ImplBase {
 
 		String docText = doc.getText();
 		List<String> tokenList = tokenize0(docText);
-		
+		//List<String> tokenList = tokenize1(docText);
 		List<Token> docTokenList = new ArrayList<Token>();
 		Map<String,Integer> tokenMap = new HashMap<String,Integer>();
 		for(String tokenElem:tokenList)

@@ -2,6 +2,7 @@ package edu.cmu.lti.f14.hw3.hw3_niloyg.casconsumers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
 import edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.DocumentObject;
@@ -25,13 +26,20 @@ public class DocumentVectorCache {
    * docVector groups documents by QID. Maintains a map of tokens per document.
    */
   private Map<Integer,ArrayList<DocumentObject>> docVectors;
+  
+  /**
+   * Vector of stop words
+   */
+  private HashSet<String> stopWords;
+  
   private DocumentVectorCache()
   {
     queryVector = new HashMap<Integer,HashMap<String,Integer>>();
     docVectors = new HashMap<Integer,ArrayList<DocumentObject>>();
+    stopWords = new HashSet<String>();
   }
 
-  static DocumentVectorCache getInstance()
+  public static DocumentVectorCache getInstance()
   {
     if(cache==null)
       cache = new DocumentVectorCache();
@@ -53,6 +61,15 @@ public class DocumentVectorCache {
   public void setDocVectors(Map<Integer, ArrayList<DocumentObject>> docVectors) {
     this.docVectors = docVectors;
   }
+  
+  public HashSet<String> getStopWords() {
+    return stopWords;
+  }
+
+  public void setStopWords(HashSet<String> stopWords) {
+    this.stopWords = stopWords;
+  }
+
   
 
 }

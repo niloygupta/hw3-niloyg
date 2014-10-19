@@ -106,7 +106,7 @@ public class RetrievalEvaluator extends CasConsumer_ImplBase {
 		super.collectionProcessComplete(arg0);
 		 PrintWriter writer = null;
 	    try {
-	      writer = new PrintWriter(new FileOutputStream(new File("src/main/resources/data/results.txt"), false));
+	      writer = new PrintWriter(new FileOutputStream(new File("report.txt"), false));
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
 	    } 

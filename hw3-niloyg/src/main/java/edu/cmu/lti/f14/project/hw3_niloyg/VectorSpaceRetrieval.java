@@ -22,11 +22,10 @@
  * 3. (optional) Improve the efficiency of the program and reduce the runtime of the retrieval system
  * 
  */
-package edu.cmu.lti.f14.hw3.hw3_niloyg;
+package edu.cmu.lti.f14.project.hw3_niloyg;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 
@@ -35,8 +34,6 @@ import org.apache.uima.analysis_engine.AnalysisEngine;
 import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.cas.CAS;
 import org.apache.uima.util.XMLInputSource;
-
-import edu.cmu.lti.f14.hw3.hw3_niloyg.casconsumers.DocumentVectorCache;
 
 public class VectorSpaceRetrieval {
 	
@@ -60,8 +57,6 @@ public class VectorSpaceRetrieval {
     if (docUrl == null) {
        throw new IllegalArgumentException("Error opening data/documents.txt");
     }
-   
-    //loadStopWords();
 		BufferedReader br = new BufferedReader(new InputStreamReader(docUrl.openStream()));
 		while ((sLine = br.readLine()) != null)   {
 			aCas.setDocumentText(sLine);
@@ -79,19 +74,5 @@ public class VectorSpaceRetrieval {
 		
 
 	}
-
-  /**
-   * @throws IOException
-   *  Load the stop words from stopword.txt
-   */
-  private static void loadStopWords() throws IOException {
-    BufferedReader br = new BufferedReader(new FileReader("src/main/resources/stopwords.txt"));
-    String line;
-    while ((line = br.readLine()) != null) {
-       DocumentVectorCache.getInstance().getStopWords().add(line);
-    }
-    br.close();
-    
-  }
 
 }

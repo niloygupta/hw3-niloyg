@@ -1,7 +1,7 @@
 
 
 /* First created by JCasGen Fri Oct 11 01:58:03 EDT 2013 */
-package edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems;
+package edu.cmu.lti.f14.project.hw3_niloyg.typesystems;
 
 import org.apache.uima.jcas.JCas; 
 import org.apache.uima.jcas.JCasRegistry;
@@ -12,8 +12,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Sat Oct 18 12:08:32 EDT 2014
- * XML source: /home/niloygupta/Assignment/hw3-niloyg/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
+ * Updated by JCasGen Fri Oct 11 01:58:03 EDT 2013
+ * XML source: /home/diwang/ur-workspace/hw3-niloyg/src/main/resources/descriptors/typesystems/VectorSpaceTypes.xml
  * @generated */
 public class Document extends Annotation {
   /** @generated
@@ -55,13 +55,10 @@ public class Document extends Annotation {
     readObject();
   }   
 
-  /** 
-   * <!-- begin-user-doc -->
+  /** <!-- begin-user-doc -->
     * Write your own initialization here
     * <!-- end-user-doc -->
-  *
-   * @generated modifiable 
-   */
+  @generated modifiable */
   private void readObject() {/*default - does nothing empty block */}
      
  
@@ -70,65 +67,35 @@ public class Document extends Annotation {
   //* Feature: relevanceValue
 
   /** getter for relevanceValue - gets 
-   * @generated
-   * @return value of the feature 
-   */
+   * @generated */
   public int getRelevanceValue() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
-      jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_relevanceValue);}
     
   /** setter for relevanceValue - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
+   * @generated */
   public void setRelevanceValue(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_relevanceValue == null)
-      jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("relevanceValue", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     jcasType.ll_cas.ll_setIntValue(addr, ((Document_Type)jcasType).casFeatCode_relevanceValue, v);}    
-   
-    
-  //*--------------*
-  //* Feature: cosineSimilarity
-
-  /** getter for cosineSimilarity - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public double getCosineSimilarity() {
-    if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_cosineSimilarity == null)
-      jcasType.jcas.throwFeatMissing("cosineSimilarity", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
-    return jcasType.ll_cas.ll_getDoubleValue(addr, ((Document_Type)jcasType).casFeatCode_cosineSimilarity);}
-    
-  /** setter for cosineSimilarity - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setCosineSimilarity(double v) {
-    if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_cosineSimilarity == null)
-      jcasType.jcas.throwFeatMissing("cosineSimilarity", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
-    jcasType.ll_cas.ll_setDoubleValue(addr, ((Document_Type)jcasType).casFeatCode_cosineSimilarity, v);}    
    
     
   //*--------------*
   //* Feature: queryID
 
   /** getter for queryID - gets 
-   * @generated
-   * @return value of the feature 
-   */
+   * @generated */
   public int getQueryID() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
-      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     return jcasType.ll_cas.ll_getIntValue(addr, ((Document_Type)jcasType).casFeatCode_queryID);}
     
   /** setter for queryID - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
+   * @generated */
   public void setQueryID(int v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_queryID == null)
-      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("queryID", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     jcasType.ll_cas.ll_setIntValue(addr, ((Document_Type)jcasType).casFeatCode_queryID, v);}    
    
     
@@ -136,21 +103,17 @@ public class Document extends Annotation {
   //* Feature: text
 
   /** getter for text - gets 
-   * @generated
-   * @return value of the feature 
-   */
+   * @generated */
   public String getText() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
-      jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     return jcasType.ll_cas.ll_getStringValue(addr, ((Document_Type)jcasType).casFeatCode_text);}
     
   /** setter for text - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
+   * @generated */
   public void setText(String v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_text == null)
-      jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("text", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     jcasType.ll_cas.ll_setStringValue(addr, ((Document_Type)jcasType).casFeatCode_text, v);}    
    
     
@@ -158,21 +121,17 @@ public class Document extends Annotation {
   //* Feature: tokenList
 
   /** getter for tokenList - gets 
-   * @generated
-   * @return value of the feature 
-   */
+   * @generated */
   public FSList getTokenList() {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)
-      jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     return (FSList)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Document_Type)jcasType).casFeatCode_tokenList)));}
     
   /** setter for tokenList - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
+   * @generated */
   public void setTokenList(FSList v) {
     if (Document_Type.featOkTst && ((Document_Type)jcasType).casFeat_tokenList == null)
-      jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f14.hw3.hw3_niloyg.typesystems.Document");
+      jcasType.jcas.throwFeatMissing("tokenList", "edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document");
     jcasType.ll_cas.ll_setRefValue(addr, ((Document_Type)jcasType).casFeatCode_tokenList, jcasType.ll_cas.ll_getFSRef(v));}    
   }
 

@@ -1,13 +1,12 @@
 package edu.cmu.lti.f14.project.hw3_niloyg.annotators;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.cas.FSIterator;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.jcas.cas.IntegerArray;
-import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.jcas.tcas.Annotation;
 
 import edu.cmu.lti.f14.project.hw3_niloyg.typesystems.Document;
